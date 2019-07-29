@@ -89,15 +89,15 @@ $(function(){
 	<header>
 		<div id="header_wrap">
 			<div class="logo">
-				<a href="/"><img src="/resources/img/comm/logo.png" alt="코딩앤플레이 전주지사"></a>
+				<a href="<c:url value="/"/>"><img src="/resources/img/comm/logo.png" alt="코딩앤플레이 전주지사"></a>
 			</div>
 			<nav>
 				<div class="gnb_wrap">
 					<ul>
-						<li><a href="#">코딩교육 창업지원</a></li>
-						<li><a href="#">코딩교육자 양성</a></li>
-						<li><a href="#">프로그래밍 강의</a></li>
-						<li><a href="#">웹사이트 제작</a></li>
+						<li><a href="<c:url value="/academy/"/>">코딩교육 창업지원</a></li>
+						<li><a href="<c:url value="/educator/"/>">코딩교육자 양성</a></li>
+						<li><a href="<c:url value="/lecture/"/>">프로그래밍 강의</a></li>
+						<li><a href="<c:url value="/website/"/>">웹사이트 제작</a></li>
 					</ul>
 				</div>
 			</nav>
