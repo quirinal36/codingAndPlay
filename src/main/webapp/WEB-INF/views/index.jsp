@@ -14,42 +14,52 @@
 <script type="text/javascript" src="/resources/js/jquery.bxslider.min.js"></script>
 <style>
 * { margin: 0; padding: 0; border: 0; list-style: none; text-decoration: none; }
-#header_wrap .logo { padding: 20px 0; text-align: center; }
-.gnb_wrap { padding: 22px 0 20px 0; background: #0097a9; }
-.gnb_wrap ul { text-align: center; font-size: 0; }
-.gnb_wrap ul li { display: inline-block; margin-left: 100px; }
-.gnb_wrap ul li:first-child { margin-left: 0; }
-.gnb_wrap ul li a { font-size: 20px; font-weight: 600; color: #fff; }
-#footer_wrap { padding: 30px 0; background: #f5f5f5; text-align: center; }
+#header_wrap { position: relative; width: 100%; height: 100px; border-bottom: 1px solid #ddd; box-sizing: border-box; }
+#header_wrap > div {  }
+#header_wrap .logo { position: absolute; top: 20px; left: 20px; }
+#header_wrap .logo img { height: 60px; }
+#header_wrap .gnb_wrap { padding-top: 40px; text-align: center; }
+#header_wrap .gnb_wrap ul { font-size: 0; }
+#header_wrap .gnb_wrap ul li { display: inline-block; margin-left: 50px; font-size: 18px; font-weight: 600; }
+#header_wrap .gnb_wrap ul li:first-child { margin-left: 0; }
+#header_wrap .gnb_wrap ul li a { letter-spacing: -.5px; transition: color .5s ease; }
+#header_wrap .gnb_wrap ul li a:hover { color: #0097a9; }
+
+
+#footer_wrap { position: relative; padding: 20px 0; border-top: 1px solid #ddd; text-align: center; }
 #footer_wrap .copyright { font-size: 16px; }
 .whyCoding { padding-top: 150px; background: #fbb713; text-align: center; }
 .whyCoding strong { display: inline-block; margin-bottom: 50px; font-size: 60px; font-weight: 800; color: #0097a9; }
 .whyCoding p { margin-bottom: 150px; line-height: 160%; font-size: 20px; color: #fff; letter-spacing: 1px; }
 .whyCoding .image { width: 100%; height: 500px; background: url(/resources/img/index/whycoding.png) no-repeat 50% 50%; background-size: cover; }
 .intro { padding: 150px 0; text-align: center; }
-.intro strong { display: inline-block; margin-bottom: 50px; font-size: 60px; font-weight: 600; color: #0097a9; }
-.intro p { line-height: 200%; font-size: 16px; }
-.ourWorks { padding: 150px 0; background: #f5f5f5; text-align: center; }
-.ourWorks > strong { display: inline-block; margin-bottom: 50px; font-size: 60px; font-weight: 600; }
-.ourWorks ul { width: 90%; max-width: 1200px; min-width: 1000px; margin: 0 auto; font-size: 0; }
-.ourWorks ul li { display: inline-block; width: 25%; padding-top: 80px; background-position: 50% 0; background-repeat: no-repeat; background-size: 50px; text-align: center; }
-.ourWorks ul li:nth-child(1) { background-image: url(/resources/img/index/work1.png); }
-.ourWorks ul li:nth-child(2) { background-image: url(/resources/img/index/work2.png); }
-.ourWorks ul li:nth-child(3) { background-image: url(/resources/img/index/work3.png); }
-.ourWorks ul li:nth-child(4) { background-image: url(/resources/img/index/work4.png); }
-.ourWorks ul li strong { display: block; margin: 0 auto 20px auto; font-size: 20px; font-weight: 600; }
-.ourWorks ul li a { display: inline-block; padding: 8px 20px; border: 1px solid #000; border-radius: 100px; font-size: 16px; color: #000; transition: all .3s ease; }
-.ourWorks ul li a:hover { background: #000; color: #fff; }
-.edu { width: 90%; max-width: 1200px; min-width: 1000px; margin: 0 auto; padding: 150px 0; text-align: center; }
-.edu > strong { display: inline-block; margin-bottom: 50px; font-size: 60px; font-weight: 600; }
-.edu ul { font-size: 0; }
-.edu ul li { display: inline-block; width: 23.5%; margin: 2% 0 0 2%; border: 1px solid #eee; box-sizing: border-box; }
+.intro > strong { display: inline-block; margin-bottom: 50px; font-size: 48px; font-weight: 800; color: #0097a9; }
+.intro > p { line-height: 200%; font-size: 16px; }
+.intro .ourWorks { text-align: center; }
+.intro .ourWorks > strong { display: block; margin: 50px 0 30px 0; font-size: 36px; font-weight: 100; }
+.intro .ourWorks ul { text-align: center; font-size: 0; }
+.intro .ourWorks li { display: inline-block; margin-left: 30px; }
+.intro .ourWorks li:first-child { margin-left: 0; }
+.intro .ourWorks a { display: block; width: 150px; height: 150px; padding-top: 60px; box-sizing: border-box; border: 5px solid #eee; border-radius: 1000px; font-size: 16px; font-weight: 600; letter-spacing: -0.5px; transition: border-color 0.5s ease; }
+.intro .ourWorks a:hover { border-color: #fbb713; font-weight: 800; }
+
+.edu { width: 90%; max-width: 1200px; min-width: 1000px; margin: 0 auto; padding: 0 0 150px 0; text-align: center; }
+.edu > strong { font-size: 48px; font-weight: 800; }
+.edu ul { margin-top: 60px; font-size: 0; }
+.edu ul li { display: inline-block; width: 23.5%; margin: 2% 0 0 2%; box-sizing: border-box; border: 1px solid #eee; border-radius: 50px; overflow: hidden; }
 .edu ul li:first-child { float: left; width: 49%; margin-left: 0; }
 .edu ul li:nth-child(-n+4) {
 	margin-top: 0;
 }
 .edu ul li a { display: block; width: 100%; padding-bottom: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
-.review { width: 90%; max-width: 1600px; min-width: 1000px; margin: 0 auto; padding: 80px 0 160px 0; border-radius: 50px; background: #5c2d8f; text-align: center; }
+.edu .review { margin-top: 60px; padding: 45px 0 50px 0; border: 5px solid #f5f5f5; border-radius: 1000px; }
+.edu .review strong { display: block; margin: 0 0 30px 0; font-size: 36px; font-weight: 100; }
+.edu .review .item p { margin-bottom: 20px; font-size: 20px; }
+.edu .review .item span { font-size: 16px; font-style: italic; }
+
+/*
+.review { width: 1200px; margin: 0 auto; }
+.edu .review strong { display: block; margin: 50px 0 30px 0; }
 .review > img { width: 50px; margin-bottom: 50px; }
 .review_slide_wrap { width: 75%; max-width: 1200px; margin: 0 auto; padding : 0; }
 .review .item p { margin-bottom: 20px; font-size: 24px; color: #fff; }
@@ -60,10 +70,11 @@
 .review .bx-wrapper .bx-prev:hover { background-position: 0 -100px; }
 .review .bx-wrapper .bx-next { background-position: -100px 0; }
 .review .bx-wrapper .bx-next:hover { background-position: -100px -100px; }
-.news { padding: 150px 0; text-align: center; }
-.news > strong { display: inline-block; margin-bottom: 50px; font-size: 60px; font-weight: 600; }
+*/
+.news { padding: 0 0 150px 0; text-align: center; }
+.news > strong { display: inline-block; margin-bottom: 50px; font-size: 48px; font-weight: 800; }
 .news ul { width: 90%; max-width: 1200px; min-width: 1000px; margin: 0 auto; font-size: 0; }
-.news ul li { position: relative; display: inline-block; width: 23.5%; margin: 2% 0 0 2%; box-sizing: border-box; border: 1px solid #eee; overflow: hidden; }
+.news ul li { position: relative; display: inline-block; width: 23.5%; margin: 2% 0 0 2%; box-sizing: border-box; border: 1px solid #eee; border-radius: 50px; overflow: hidden; }
 .news ul li:nth-child(4n-3) { margin-left: 0; }
 .news ul li:nth-child(-n+5) { margin-top: 0; }
 .news ul li img { width: 100%; cursor: pointer; }
@@ -78,6 +89,7 @@ $(function(){
 	$('.review_slide').bxSlider({
 	    controls: true,
 	    // touchEnabled: false,
+	    pager: false,
 	    auto: true,
 	    pause: 8000
 	});
@@ -91,16 +103,18 @@ $(function(){
 			<div class="logo">
 				<a href="<c:url value="/"/>"><img src="/resources/img/comm/logo.png" alt="코딩앤플레이 전주지사"></a>
 			</div>
-			<nav>
-				<div class="gnb_wrap">
+			<div class="gnb_wrap">
+				<nav>
 					<ul>
 						<li><a href="<c:url value="/academy/"/>">코딩교육 창업지원</a></li>
 						<li><a href="<c:url value="/educator/"/>">코딩교육자 양성</a></li>
-						<li><a href="<c:url value="/lecture/"/>">프로그래밍 강의</a></li>
-						<li><a href="<c:url value="/website/"/>">웹사이트 제작</a></li>
+						<li><a href="<c:url value="/lecture/"/>">유아 코딩교육</a></li>
+						<li><a href="<c:url value="/website/"/>">초등 코딩교육</a></li>
+						<li><a href="<c:url value="/website/"/>">프로그래밍 교육</a></li>
+						<li><a href="<c:url value="/website/"/>">코딩 이야기</a></li>
 					</ul>
-				</div>
-			</nav>
+				</nav>
+			</div>
 		</div>
 	</header>
 	<div id="container_wrap">
@@ -122,27 +136,17 @@ $(function(){
 					대학교, 관공서, 기업의 프로젝트를 진행하며 풍부한 현장 실무 경험을 갖고 있습니다.<br>
 					코딩앤플레이 전주지사를 찾아주시는 분들께 양질의 코딩교육을 수행할 수 있도록 최선을 다하겠습니다.
 				</p>
-			</div>
-			<div class="ourWorks">
-				<strong>Our Works</strong>
-				<ul>
-					<li class="item1">
-						<strong>코딩교육 창업지원</strong>
-						<a href="#">more +</a>
-					</li>
-					<li class="item2">
-						<strong>코딩교육자 양성</strong>
-						<a href="#">more +</a>
-					</li>
-					<li class="item3">
-						<strong>실무 프로그래밍 교육</strong>
-						<a href="#">more +</a>
-					</li>
-					<li class="item4">
-						<strong>웹사이트 제작</strong>
-						<a href="#">more +</a>
-					</li>
-				</ul>
+				<div class="ourWorks">
+					<strong>Our Works</strong>
+					<ul>
+						<li><a href="#">코딩교육 창업지원</a></li>
+						<li><a href="#">코딩교육자 양성</a></li>
+						<li><a href="#">유아 코딩교육</a></li>
+						<li><a href="#">초등 코딩교육</a></li>
+						<li><a href="#">프로그래밍 교육</a></li>
+						<li><a href="#">코딩 이야기</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="edu">
 				<strong>프로그래밍 강의</strong>
@@ -153,7 +157,27 @@ $(function(){
 					<li><a href="#" style="background-image: url(/resources/img/temp/4.png);">처음부터 시작하는 html+css</a></li>
 					<li><a href="#" style="background-image: url(/resources/img/temp/4.png);">처음부터 시작하는 html+css</a></li>
 				</ul>
+				<div class="review">
+					<strong>수강후기</strong>
+					<div class="review_slide_wrap">
+						<div class="review_slide">
+							<div class="item">
+								<p>6개월 꾸준히 배운 결과 하루에 100명 이상 접속하는 어플리케이션 운영자가 됐어요.</p>
+								<span>- 고등학생 A군 -</span>
+							</div>
+							<div class="item">
+								<p>6개월 꾸준히 배운 결과 하루에 100명 이상 접속하는 어플리케이션 운영자가 됐어요.</p>
+								<span>- 고등학생 A군 -</span>
+							</div>
+							<div class="item">
+								<p>6개월 꾸준히 배운 결과 하루에 100명 이상 접속하는 어플리케이션 운영자가 됐어요.</p>
+								<span>- 고등학생 A군 -</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			<!-- 
 			<div class="review">
 				<img src="/resources/img/index/review_icon.png" alt="icon">
 				<div class="review_slide_wrap">
@@ -172,7 +196,7 @@ $(function(){
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="news">
 				<strong>코딩 이야기</strong>
 				<ul>
